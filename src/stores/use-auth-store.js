@@ -1,4 +1,12 @@
-import { auth } from '../../firebase.config';
+import { create } from 'zustand';
+import { auth, db } from '../../firebase.config';
+// import the GoogleAuthProvider from the auth module
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged,
+} from 'firebase/auth';
 
 const provider = new GoogleAuthProvider();
 
@@ -6,7 +14,7 @@ const useAuthStore = create((set) => ({
   user: null,
   loading: true,
 
-  loginGoogleWithPopup: async () => {
+  loginGoogleWithPopUp: async () => {
     await signInWithPopup(auth, provider).catch((error) => {
       console.log(error);
     });
@@ -33,3 +41,5 @@ const useAuthStore = create((set) => ({
     });
   },
 }));
+
+export default useAuthStore;
