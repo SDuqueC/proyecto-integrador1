@@ -16,8 +16,8 @@ const AnimatedObject = () => {
 
     return (
         <mesh ref={meshRef} position={[0, 0, 0]}>
-            <boxGeometry args={[1, 1, 1]} />
-            <MeshDistortMaterial color="hotpink" speed={1} distort={0.3} />
+            <torusGeometry args={[1, 0.4, 16, 100]} />
+            <MeshDistortMaterial color="white" speed={1} distort={0.3} />
         </mesh>
     );
 };

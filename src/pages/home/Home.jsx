@@ -1,25 +1,26 @@
-import React from 'react';
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 import useAuthStore from '../../stores/use-auth-store';
 import { useNavigate } from 'react-router-dom';
+import ThreeScene from './ThreeScene';
 
 const Home = () => {
-  const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
-    useAuthStore();
-
+  const { user, logout } = useAuthStore();
   const navigate = useNavigate();
 
   const handleLogout = useCallback(() => {
     logout();
     navigate('/');
-  }, [logout]);
+  }, [logout, navigate]);
 
   return (
     <div>
       <h1>Welcome to My App!</h1>
       <p>This is the home page.</p>
+
+      <ThreeScene />
+
       <button className="button-logout" onClick={handleLogout}>
-        Cerrar sesión
+        Log out
       </button>
     </div>
   );
