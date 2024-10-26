@@ -1,22 +1,15 @@
-// import './Login.css';
-// import { useCallback, useEffect } from 'react';
-// import useAuthStore from '../../stores/use-auth-store';
-// import UserDAO from '../../daos/UserDAO';
-// import { useNavigate } from 'react-router-dom';
-
-import EXpatialMainLogoOnly from '../../assets/svgs/EXpatialMainLogoOnly.svg';
-// import { BsGoogle } from "react-icons/bs";
-import './Login.css';
-import { useCallback, useEffect } from 'react';
-import useAuthStore from '../../stores/use-auth-store';
-import { useNavigate } from 'react-router-dom';
-import { doc, setDoc } from 'firebase/firestore';
-import { db } from '../../../firebase.config';
+import React, { useCallback, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../../firebase.config";
+import useAuthStore from "../../stores/use-auth-store";
+import EXpatialMainLogoOnly from "../../assets/svgs/EXpatialMainLogoOnly.svg";
+import WaterDrop from "/src/components/WaterDrop";
+import "./Login.css";
 
 const Login = () => {
   const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
     useAuthStore();
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +19,7 @@ const Login = () => {
   useEffect(() => {
     if (user) {
       const saveUserToFirestore = async () => {
-        const userDocRef = doc(db, 'users', user.uid);
+        const userDocRef = doc(db, "users", user.uid);
         await setDoc(
           userDocRef,
           {
@@ -40,7 +33,7 @@ const Login = () => {
       };
 
       saveUserToFirestore();
-      navigate('/home');
+      navigate("/home");
     }
   }, [user, navigate]);
 
@@ -57,8 +50,11 @@ const Login = () => {
   }
 
   return (
-    <div className="container-login">
-      <div className="card">
+    <div className="login-container">
+      <div className="left-section">
+        <WaterDrop />
+      </div>
+      <div className="right-section">
         <img className="logo" src={EXpatialMainLogoOnly} alt="EXpatial" />
         {user ? (
           <>
@@ -68,7 +64,7 @@ const Login = () => {
             </button>
           </>
         ) : (
-          <button onClick={handleLogin}>Iniciar sesión</button>
+          <button onClick={handleLogin}>Iniciar sesión con Google</button>
         )}
       </div>
     </div>

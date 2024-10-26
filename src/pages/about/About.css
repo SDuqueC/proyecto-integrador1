@@ -1,0 +1,16 @@
+.about {
+    text-align: center;
+    margin: 2rem;
+  }
+  .about h1 {
+    font-size: 2.5rem;
+  }
+  .about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .about li {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
