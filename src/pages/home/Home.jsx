@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import useAuthStore from '../../stores/use-auth-store';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/nav-bar/NavBar';
 import ThreeScene from './ThreeScene';
 
 const Home = () => {
@@ -13,6 +14,10 @@ const Home = () => {
   }, [logout, navigate]);
 
   return (
+    <>
+    <div className='navbar-container'>
+      <Navbar />
+    </div>
     <div>
       <h1>Welcome to My App!</h1>
       <p>This is the home page.</p>
@@ -23,6 +28,7 @@ const Home = () => {
         Log out
       </button>
     </div>
+    </>
   );
 };
 

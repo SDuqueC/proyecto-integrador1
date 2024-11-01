@@ -13,4 +13,12 @@
     font-size: 1.2rem;
     margin-top: 1rem;
   }
+
+  .navbar-container {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
   
