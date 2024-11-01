@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import EXpatialMainLogoOnly from "../../assets/svgs/EXpatialMainLogoOnly.svg";
 import github_mark from "../../assets/svgs/github_mark.svg";
-import "./Navbar.css";
+import "./NavBar.css";
 
 function Navbar() {
   return (
