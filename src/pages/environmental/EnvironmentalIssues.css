@@ -1,21 +1,41 @@
 .environmental-issues {
-    text-align: center;
-    margin: 2rem;
-  }
-  .environmental-issues h1 {
-    font-size: 2.5rem;
-  }
-  .environmental-issues section {
-    margin-top: 1.5rem;
-  }
-  .environmental-issues h2 {
-    font-size: 2rem;
-  }
+  background-color: #1c1c1e;
+  color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
 
-  .navbar-container {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+.issues-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.issue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.issue-description {
+  margin-top: 15px;
+}
+
+.issue-description h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.issue-description p {
+  font-size: 1em;
+}
+
+.environmental-issues h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
