@@ -1,6 +1,8 @@
 import React from "react";
 import ScarcityModel from "../../components/ScarcityModel";
 import ContaminationModel from "../../components/ContaminationModel";
+import RiverModel from "../../components/River";
+import RiverNoWater from "../../components/RiverNoWater";
 import "./EnvironmentalIssues.css";
 import Navbar from "../../components/nav-bar/NavBar";
 
@@ -31,6 +33,12 @@ const EnvironmentalIssues = () => {
                 This section highlights issues surrounding water contamination
                 and its impact on ecosystems and human health.
               </p>
+            </div>
+            <div className="River">
+              <RiverModel />
+            </div>
+            <div className="RiverNoWater">
+              <RiverNoWater />
             </div>
           </div>
         </div>
