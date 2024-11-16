@@ -81,7 +81,7 @@
   justify-content: center;
   padding: 2rem;
   border-radius: 48px;
-  background-color: white;
+  background-color: rgba(123, 184, 254, 0.24);
 }
 
 .button {

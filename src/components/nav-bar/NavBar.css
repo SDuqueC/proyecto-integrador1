@@ -4,8 +4,8 @@
     width: fit-content;
     align-items: center;
     background-color: lightcyan;
-    border-radius: 50px;
-    margin: 20px;
+    border-radius: 60px;
+    margin: 5px;
   }
   
 .navbar-logo {
@@ -25,7 +25,7 @@
 
 .navbar-menu {
 display: flex;
-flex: 3;
+flex: 4;
 list-style: none;
 background-color: transparent;
 justify-content: center;

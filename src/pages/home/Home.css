@@ -1,7 +1,44 @@
+/* Home.css */
+
 .navbar-container {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding: 1rem;
+  margin-top: 0; /* Cambia el margen superior a 0 para que esté en el borde superior */
+  z-index: 1000; /* Asegúrate de que esté sobre otros elementos de la página */
+}
+
+.home-content {
+  margin-top: 10rem; /* Ajuste de espacio para el contenido principal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh; /* Ocupa el 100% del ancho */
+  padding: 0 2rem; /* Margen opcional para no pegar el contenido a los bordes */
+  box-sizing: border-box;
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button-logout {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}

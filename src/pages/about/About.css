@@ -1,24 +1,34 @@
-.about {
-    text-align: center;
-    margin: 2rem;
-  }
-  .about h1 {
-    font-size: 2.5rem;
-  }
-  .about ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .about li {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
+/* About.css */
 
-  .navbar-container {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
+
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%; /* Ocupa el 100% del ancho */
+  padding: 0 2rem; /* Margen opcional para no pegar el contenido a los bordes */
+  box-sizing: border-box;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about li {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
