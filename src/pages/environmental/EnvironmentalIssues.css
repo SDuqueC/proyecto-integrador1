@@ -39,3 +39,15 @@
   font-size: 2.5em;
   margin-bottom: 30px;
 }
+
+.River {
+  width: 100%;
+  height: 400px; /* Ajusta la altura del modelo */
+  margin-top: 20px; /* Espacio respecto a otros elementos */
+}
+
+.RiverNoWater {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
