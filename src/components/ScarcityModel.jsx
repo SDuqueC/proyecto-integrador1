@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, Environment, PerspectiveCamera } from "@react-three/drei";
+import { useGLTF, Environment, PerspectiveCamera, ContactShadows } from "@react-three/drei";
 
 const RotatingModel = () => {
   const modelRef = useRef();
@@ -11,6 +11,13 @@ const RotatingModel = () => {
   });
 
   const { scene } = useGLTF("/models/water_scarcity_model.glb");
+
+  scene.traverse((child) => {
+    if (child.isMesh) {
+      child.castShadow = true;
+      child.receiveShadow = true;
+    }
+  });
 
   return <primitive ref={modelRef} object={scene} scale={0.5} />;
 };

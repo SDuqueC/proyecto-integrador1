@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../components/nav-bar/NavBar";
 import ScarcityModel from "../../components/ScarcityModel";
 import ContaminationModel from "../../components/ContaminationModel";
 import RiverModel from "../../components/River";
@@ -10,6 +11,7 @@ import ButtonContamination from "../../components/ButtonContamination"; // Impor
 import "./EnvironmentalIssues.css";
 import Navbar from "../../components/nav-bar/NavBar";
 import SceneEnvironment from "../../components/SceneEnvironment"; // Asegúrate de importar
+
 
 const EnvironmentalIssues = () => {
   return (

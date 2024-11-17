@@ -7,6 +7,7 @@ import {
   OrbitControls,
 } from "@react-three/drei";
 
+
 const RotatingModelOpposite = () => {
   const modelRef = useRef();
 
@@ -18,6 +19,7 @@ const RotatingModelOpposite = () => {
   });
 
   const { scene } = useGLTF("/models/water_contamination_model.glb");
+
 
   return (
     <primitive
