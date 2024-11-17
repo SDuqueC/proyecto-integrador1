@@ -8,23 +8,31 @@ const RotatingMesh = () => {
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
-    meshRef.current.rotation.x = elapsedTime * 0.4;
-    meshRef.current.rotation.y = elapsedTime * 0.6;
+    if (meshRef.current) {
+      meshRef.current.rotation.x = elapsedTime * 0.4;
+      meshRef.current.rotation.y = elapsedTime * 0.6;
+    }
   });
 
   return (
-    <mesh ref={meshRef}>
-      <icosahedronGeometry args={[1.5, 0]} />
-      <meshStandardMaterial color="#7ec8e3" roughness={0.2} metalness={0.5} />
+    <mesh ref={meshRef} castShadow>
+      <sphereGeometry args={[1.2, 64, 64]} />
+      <meshStandardMaterial
+        color="#5dade2"
+        roughness={0.1}
+        metalness={0.8}
+        transparent
+        opacity={0.8}
+      />
     </mesh>
   );
 };
 
 const WaterDrop = () => {
   return (
-    <Canvas style={{ height: "100vh", width: "100%" }}>
+    <Canvas shadows style={{ height: "100vh", width: "100%" }}>
       <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 5, 5]} intensity={1} />
+      <spotLight position={[10, 10, 10]} intensity={1} castShadow />
       <RotatingMesh />
       <OrbitControls enableZoom={false} />
       <Environment preset="sunset" />

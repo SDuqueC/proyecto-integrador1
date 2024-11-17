@@ -18,7 +18,11 @@ const RotatingModel = () => {
 const ScarcityModel = () => {
   return (
     <Canvas style={{ width: "100%", height: "400px" }}>
-      <PerspectiveCamera makeDefault position={[0.5, 3, 10]} rotation={[-0.6,0,0]} />
+      <PerspectiveCamera
+        makeDefault
+        position={[0.5, 3, 10]}
+        rotation={[-0.6, 0, 0]}
+      />
       <ambientLight intensity={0.5} />
       <directionalLight position={[0, 5, 5]} intensity={1} />
       <RotatingModel />
