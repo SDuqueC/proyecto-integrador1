@@ -1,10 +1,8 @@
 import React from "react";
+import Navbar from "../../components/nav-bar/NavBar";
 import ScarcityModel from "../../components/ScarcityModel";
 import ContaminationModel from "../../components/ContaminationModel";
 import RiverModel from "../../components/River";
-import RiverNoWater from "../../components/RiverNoWater";
-import "./EnvironmentalIssues.css";
-import Navbar from "../../components/nav-bar/NavBar";
 
 const EnvironmentalIssues = () => {
   return (
@@ -25,20 +23,25 @@ const EnvironmentalIssues = () => {
               </p>
             </div>
           </div>
-          <div className="issue">
-            <ContaminationModel />
-            <div className="issue-description">
-              <h2>Water Contamination</h2>
-              <p>
-                This section highlights issues surrounding water contamination
-                and its impact on ecosystems and human health.
-              </p>
+          <div className="issues-container">
+            <div className="issue">
+              <ContaminationModel />
+              <div className="issue-description">
+                <h2>Water Contamination</h2>
+                <p>
+                  This section highlights issues surrounding water contamination
+                  and its impact on ecosystems and human health.
+                </p>
+              </div>
             </div>
-            <div className="River">
+            <div className="issue">
               <RiverModel />
-            </div>
-            <div className="RiverNoWater">
-              <RiverNoWater />
+              <div className="issue-description">
+                <h2>River Status</h2>
+                <p>
+                  Hover over the river model to see the changes between a healthy river and a dry river.
+                </p>
+              </div>
             </div>
           </div>
         </div>
