@@ -3,6 +3,7 @@
   color: #f1f1f1;
   padding: 20px;
   text-align: center;
+  padding-top: 14%;
 }
 
 .issues-container {
@@ -10,7 +11,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 12%;
+
 }
 
 .issue {
@@ -24,7 +29,7 @@
 }
 
 .issue-description {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .issue-description h2 {

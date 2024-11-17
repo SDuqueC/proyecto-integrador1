@@ -7,19 +7,23 @@ const RotatingModelOpposite = () => {
 
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
-    modelRef.current.rotation.y = -elapsedTime * 0.5;
+    if (modelRef.current) {
+      modelRef.current.rotation.y = -elapsedTime * 0.5;
+    }
   });
 
   const { scene } = useGLTF("/models/water_contamination_model.glb");
 
-  scene.traverse((child) => {
-    if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
-    }
-  });
 
-  return <primitive ref={modelRef} object={scene} scale={0.5} />;
+  return (
+    <primitive
+      ref={modelRef}
+      object={scene}
+      scale={0.5}
+      castShadow
+      receiveShadow
+    />
+  );
 };
 
 const ContaminationModel = () => {

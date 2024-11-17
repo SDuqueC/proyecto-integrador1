@@ -27,7 +27,7 @@ const ScarcityModel = () => {
     <Canvas style={{ width: "100%", height: "400px" }} shadows>
       <PerspectiveCamera makeDefault position={[0.6, 3, 9.5]} rotation={[-0.7, 0, 0]} />
       <ambientLight intensity={0.5} />
-      <directionalLight position={[0, 5, 5]} intensity={1} castShadow shadow-mapSize-width={2048} shadow-mapSize-height={2048} />
+      <directionalLight position={[0, 5, 5]} intensity={1} />
       <RotatingModel />
       <Environment preset="sunset" />
       <Sky sunPosition={[100, 20, 100]} />
