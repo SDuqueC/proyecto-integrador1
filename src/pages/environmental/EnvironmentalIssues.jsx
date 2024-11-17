@@ -9,7 +9,6 @@ import { OrbitControls } from "@react-three/drei";
 import ButtonScarcity from "../../components/ButtonScarcity";
 import ButtonContamination from "../../components/ButtonContamination"; // Importa el botón
 import "./EnvironmentalIssues.css";
-import Navbar from "../../components/nav-bar/NavBar";
 import SceneEnvironment from "../../components/SceneEnvironment"; // Asegúrate de importar
 
 
