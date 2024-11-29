@@ -1,5 +1,6 @@
 /* Home.css */
 
+/* Navbar: Mantiene la barra superior fija */
 .navbar-container {
   position: fixed;
   top: 0;
@@ -9,23 +10,51 @@
   justify-content: center;
   background-color: transparent;
   padding: 1rem;
-  margin-top: 0; /* Cambia el margen superior a 0 para que esté en el borde superior */
-  z-index: 1000; /* Asegúrate de que esté sobre otros elementos de la página */
+  margin-top: 0;
+  z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
 }
 
+/* Contenedor principal */
 .home-content {
-  margin-top: 10rem; /* Ajuste de espacio para el contenido principal */
+  margin-top: 5rem; /* Espacio para que el contenido no esté cubierto por la navbar */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100vw;
-  height: 100vh; /* Ocupa el 100% del ancho */
-  padding: 0 2rem; /* Margen opcional para no pegar el contenido a los bordes */
+  height: calc(100vh - 5rem); /* La altura total menos la navbar */
   box-sizing: border-box;
 }
 
+/* Contenedor para la escena 3D */
+.scene-container {
+  width: 100%;
+  height: 100vw; /* La escena ocupa el 80% de la pantalla */
+  border-radius: 8px; /* Esquinas redondeadas para diseño */
+  overflow: hidden; /* Evita que el contenido de la escena desborde */
+  border: 2px solid #ccc; /* Opcional: borde para delimitar el área */
+}
+
+/* Estilo del botón de logout */
+.button-logout {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-logout:hover {
+  background-color: #ff1a1a;
+}
+
+/* Títulos y textos */
 .home-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -34,11 +63,4 @@
 .home-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-}
-
-.button-logout {
-  margin-top: 1.5rem;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/nav-bar/NavBar";
 import ScarcityModel from "../../components/ScarcityModel";
 import ContaminationModel from "../../components/ContaminationModel";
 import RiverModel from "../../components/River";
@@ -7,10 +6,10 @@ import RiverNoWater from "../../components/RiverNoWater";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import ButtonScarcity from "../../components/ButtonScarcity";
-import ButtonContamination from "../../components/ButtonContamination"; // Importa el botón
+import ButtonContamination from "../../components/ButtonContamination";
 import "./EnvironmentalIssues.css";
-import SceneEnvironment from "../../components/SceneEnvironment"; // Asegúrate de importar
-
+import Navbar from "../../components/nav-bar/NavBar";
+import SceneEnvironment from "../../components/SceneEnvironment";
 
 const EnvironmentalIssues = () => {
   return (
@@ -24,7 +23,6 @@ const EnvironmentalIssues = () => {
           <div className="issue">
             <ScarcityModel />
             <div className="issue-description">
-              <h2>Water Scarcity</h2>
               <p>
                 This section focuses on the challenges related to water
                 scarcity, explaining its causes and effects.
@@ -33,7 +31,7 @@ const EnvironmentalIssues = () => {
                 <Canvas
                   shadows
                   style={{
-                    height: "300px", // Ajusta el tamaño según necesites
+                    height: "300px",
                   }}
                 >
                   <ambientLight intensity={0.4} />
@@ -62,7 +60,7 @@ const EnvironmentalIssues = () => {
               <Canvas
                 shadows
                 style={{
-                  height: "300px", // Ajusta el tamaño según necesites
+                  height: "300px", 
                 }}
               >
                 <ambientLight intensity={0.4} />
