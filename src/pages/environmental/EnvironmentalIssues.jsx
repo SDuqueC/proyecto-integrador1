@@ -6,9 +6,10 @@ import RiverNoWater from "../../components/RiverNoWater";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import ButtonScarcity from "../../components/ButtonScarcity";
-import ButtonContamination from "../../components/ButtonContamination"; // Importa el botón
+import ButtonContamination from "../../components/ButtonContamination";
 import "./EnvironmentalIssues.css";
 import Navbar from "../../components/nav-bar/NavBar";
+import SceneEnvironment from "../../components/SceneEnvironment";
 
 const EnvironmentalIssues = () => {
   return (
@@ -30,7 +31,7 @@ const EnvironmentalIssues = () => {
                 <Canvas
                   shadows
                   style={{
-                    height: "300px", // Ajusta el tamaño según necesites
+                    height: "300px",
                   }}
                 >
                   <ambientLight intensity={0.4} />
@@ -59,7 +60,7 @@ const EnvironmentalIssues = () => {
               <Canvas
                 shadows
                 style={{
-                  height: "300px", // Ajusta el tamaño según necesites
+                  height: "300px", 
                 }}
               >
                 <ambientLight intensity={0.4} />
