@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import useAuthStore from "../../stores/use-auth-store";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/nav-bar/NavBar";
-import ThreeScene from "../../components/ThreeScene";
+import WaterScene from "../../components/environment/WaterScene"; // Importamos el mundo 3D
 import "./Home.css";
 
 const Home = () => {
@@ -19,14 +19,16 @@ const Home = () => {
       <div className="navbar-container">
         <Navbar />
       </div>
-      <div className="home-content">
-        <h1>Welcome to My App!</h1>
-        <p>This is the home page.</p>
 
-        <ThreeScene />
+      {/* Ajustamos el diseño para que la escena ocupe toda la pantalla */}
+      <div className="home-content">
+        {/* Aquí integramos directamente la escena 3D */}
+        <div className="scene-container">
+          <WaterScene />
+        </div>
 
         <button className="button-logout" onClick={handleLogout}>
-          Log out
+          Cerrar sesión
         </button>
       </div>
     </>

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/nav-bar/NavBar";
 import ScarcityModel from "../../components/ScarcityModel";
 import ContaminationModel from "../../components/ContaminationModel";
 import RiverModel from "../../components/River";
@@ -10,8 +9,6 @@ import ButtonScarcity from "../../components/ButtonScarcity";
 import ButtonContamination from "../../components/ButtonContamination"; // Importa el botón
 import "./EnvironmentalIssues.css";
 import Navbar from "../../components/nav-bar/NavBar";
-import SceneEnvironment from "../../components/SceneEnvironment"; // Asegúrate de importar
-
 
 const EnvironmentalIssues = () => {
   return (
@@ -25,7 +22,6 @@ const EnvironmentalIssues = () => {
           <div className="issue">
             <ScarcityModel />
             <div className="issue-description">
-              <h2>Water Scarcity</h2>
               <p>
                 This section focuses on the challenges related to water
                 scarcity, explaining its causes and effects.
