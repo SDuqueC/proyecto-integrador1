@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.return-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #646cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #535bf2;
+}

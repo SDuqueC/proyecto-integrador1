@@ -20,6 +20,9 @@ function Navbar() {
         <li className="navbar-item">
           <Link to="/issues"> PROBLEMAS AMBIENTALES </Link>
         </li>
+        <li className="quiz-item">
+          <Link to="/quiz"> QUIZ </Link>
+        </li>
       </ul>
       <div className="navbar-icon">
         <a
