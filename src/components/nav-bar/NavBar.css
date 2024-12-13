@@ -3,11 +3,19 @@
     justify-content: center;
     width: fit-content;
     align-items: center;
-    background-color: lightcyan;
+    background-color: #1a1a1a;
     border-radius: 60px;
     margin: 5px;
+    padding: 1rem;
   }
   
+  .navbar a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
 .navbar-logo {
     display: flex;
     flex: 1;
@@ -55,3 +63,11 @@ background-color: transparent;
 cursor: pointer;
 margin-right: 5rem;
 }
+
+.navbar a:hover {
+    color: #646cff;
+  }
+  
+  main {
+    padding: 2rem;
+  }
