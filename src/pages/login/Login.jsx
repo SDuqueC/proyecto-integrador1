@@ -1,12 +1,15 @@
-import React, { useCallback, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { doc, setDoc } from 'firebase/firestore';
-import { db } from '../../../firebase.config';
-import useAuthStore from '../../stores/use-auth-store';
-import EXpatialMainLogoOnly from '../../assets/svgs/EXpatialMainLogoOnly.svg';
-import WaterDrop from '../../components/WaterDrop';
-import LoginScene from './LoginScene';
-import './Login.css';
+import React, { useCallback, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../../../firebase.config";
+import useAuthStore from "../../stores/use-auth-store";
+import EXpatialMainLogoOnly from "../../assets/svgs/EXpatialMainLogoOnly.svg";
+import WaterDrop from "../../components/WaterDrop";
+import LoginScene from "./LoginScene";
+import "./Login.css";
+
+// Importar el audio
+import backgroundMusic from "/src/assets/audio/agua.mp3";
 
 const Login = () => {
   const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
@@ -21,7 +24,7 @@ const Login = () => {
   useEffect(() => {
     if (user) {
       const saveUserToFirestore = async () => {
-        const userDocRef = doc(db, 'users', user.uid);
+        const userDocRef = doc(db, "users", user.uid);
         await setDoc(
           userDocRef,
           {
@@ -35,7 +38,7 @@ const Login = () => {
       };
 
       saveUserToFirestore();
-      navigate('/home');
+      navigate("/home");
     }
   }, [user, navigate]);
 
@@ -78,6 +81,12 @@ const Login = () => {
           )}
         </div>
       </div>
+
+      {/* Audio multimedia */}
+      <audio className="background-audio" autoPlay loop>
+        <source src={backgroundMusic} type="audio/mp3" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
     </div>
   );
 };
